@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="th">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,144 +38,261 @@
     <div class="msg" id="errorMsg">❌ เกิดข้อผิดพลาดในการแชร์</div> 
 
     <script>
-        // กำหนด Flex Message
+        // กำหนด Flex Message (แก้ไขโครงสร้าง JSON ให้ถูกต้อง)
         const flexMessage = {
             type: "flex",
             altText: "ประชาสัมพันธ์!! การทำสัญญาออนไลน์เข้าเป็น นตท.",
             contents: {
-                "type": "bubble",
-                "size": "giga",
-                "body": {
-                    "type": "box",
-                    "layout": "horizontal",
-                    "contents": [
+                type: "bubble",
+                size: "giga",
+                body: {
+                    type: "box",
+                    layout: "horizontal",
+                    contents: [
                         {
-                            "type": "image",
-                            "url": "https://img1.pic.in.th/images/-.-2.png",
-                            "size": "full",
-                            "aspectMode": "cover",
-                            "aspectRatio": "300:424",
-                            "align": "center"
+                            type: "image",
+                            url: "https://img1.pic.in.th/images/-.-2.png",
+                            size: "full",
+                            aspectMode: "fit",
+                            aspectRatio: "300:424",
+                            animated: true
                         },
                         {
-                            "type": "button",
-                            "action": {
-                                "type": "uri",
-                                "label": " ",
-                                "uri": "https://canva.link/gotobannaafaps69"
+                            type: "button",
+                            action: {
+                                type: "uri",
+                                uri: "https://canva.link/gotobannaafaps69",
+                                label: " "
                             },
-                            "position": "absolute",
-                            "offsetTop": "27%",
-                            "offsetStart": "7%",
-                            "offsetBottom": "49%",
-                            "offsetEnd": "66%"
+                            position: "absolute",
+                            offsetTop: "26%",
+                            offsetBottom: "63%",
+                            offsetStart: "7%",
+                            offsetEnd: "66%"
                         },
                         {
-                            "type": "button",
-                            "action": {
-                                "type": "uri",
-                                "label": " ",
-                                "uri": "https://drive.google.com/file/d/1hwRp9SOclYfxnxoPG1CAPHjpyzC_V1CH/view?usp=drive_link"
+                            type: "button",
+                            action: {
+                                type: "uri",
+                                uri: "https://canva.link/gotobannaafaps69",
+                                label: " "
                             },
-                            "position": "absolute",
-                            "offsetTop": "27%",
-                            "offsetStart": "37%",
-                            "offsetBottom": "49%",
-                            "offsetEnd": "36%"
+                            position: "absolute",
+                            offsetTop: "36%",
+                            offsetBottom: "54%",
+                            offsetStart: "7%",
+                            offsetEnd: "66%"
                         },
                         {
-                            "type": "button",
-                            "action": {
-                                "type": "uri",
-                                "label": " ",
-                                "uri": "https://drive.google.com/file/d/1p5CUI80N0KAiEVEuyZrkyeO3d9GrE6zM/view?usp=sharing"
+                            type: "button",
+                            action: {
+                                type: "uri",
+                                uri: "https://drive.google.com/file/d/1hwRp9SOclYfxnxoPG1CAPHjpyzC_V1CH/view?usp=drive_link",
+                                label: " "
                             },
-                            "position": "absolute",
-                            "offsetTop": "27%",
-                            "offsetStart": "66%",
-                            "offsetBottom": "49%",
-                            "offsetEnd": "7%"
+                            position: "absolute",
+                            offsetTop: "26%",
+                            offsetBottom: "63%",
+                            offsetStart: "37%",
+                            offsetEnd: "36%"
                         },
                         {
-                            "type": "button",
-                            "action": {
-                                "type": "uri",
-                                "label": " ",
-                                "uri": "https://www.afapsschool.com/af69/index_register69?groupkey=1"
+                            type: "button",
+                            action: {
+                                type: "uri",
+                                uri: "https://drive.google.com/file/d/1hwRp9SOclYfxnxoPG1CAPHjpyzC_V1CH/view?usp=drive_link",
+                                label: " "
                             },
-                            "position": "absolute",
-                            "offsetTop": "56%",
-                            "offsetStart": "7%",
-                            "offsetBottom": "27%",
-                            "offsetEnd": "66%"
+                            position: "absolute",
+                            offsetTop: "36%",
+                            offsetBottom: "54%",
+                            offsetStart: "37%",
+                            offsetEnd: "36%"
                         },
                         {
-                            "type": "button",
-                            "action": {
-                                "type": "uri",
-                                "label": " ",
-                                "uri": "https://www.afapsschool.com/af69/index_register69?groupkey=2"
+                            type: "button",
+                            action: {
+                                type: "uri",
+                                uri: "https://drive.google.com/file/d/1p5CUI80N0KAiEVEuyZrkyeO3d9GrE6zM/view?usp=sharing",
+                                label: " "
                             },
-                            "position": "absolute",
-                            "offsetTop": "56%",
-                            "offsetStart": "37%",
-                            "offsetBottom": "27%",
-                            "offsetEnd": "37%"
+                            position: "absolute",
+                            offsetTop: "26%",
+                            offsetBottom: "63%",
+                            offsetStart: "67%",
+                            offsetEnd: "7%"
                         },
                         {
-                            "type": "button",
-                            "action": {
-                                "type": "uri",
-                                "label": " ",
-                                "uri": "https://www.afapsschool.com/af69/index_register69?groupkey=3"
+                            type: "button",
+                            action: {
+                                type: "uri",
+                                uri: "https://drive.google.com/file/d/1p5CUI80N0KAiEVEuyZrkyeO3d9GrE6zM/view?usp=sharing",
+                                label: " "
                             },
-                            "position": "absolute",
-                            "offsetTop": "70%",
-                            "offsetStart": "7%",
-                            "offsetBottom": "13%",
-                            "offsetEnd": "66%"
+                            position: "absolute",
+                            offsetTop: "36%",
+                            offsetBottom: "54%",
+                            offsetStart: "67%",
+                            offsetEnd: "7%"
                         },
                         {
-                            "type": "button",
-                            "action": {
-                                "type": "uri",
-                                "label": " ",
-                                "uri": "https://www.afapsschool.com/af69/index_register69?groupkey=4"
+                            type: "button",
+                            action: {
+                                type: "uri",
+                                uri: "https://www.afapsschool.com/af69/index_register69?groupkey=1",
+                                label: " "
                             },
-                            "position": "absolute",
-                            "offsetTop": "70%",
-                            "offsetStart": "37%",
-                            "offsetBottom": "13%",
-                            "offsetEnd": "37%"
+                            position: "absolute",
+                            offsetTop: "55%",
+                            offsetBottom: "38%",
+                            offsetStart: "7%",
+                            offsetEnd: "66%"
                         },
                         {
-                            "type": "button",
-                            "action": {
-                                "type": "uri",
-                                "label": " ",
-                                "uri": "https://www.afapsschool.com/af69/go2school"
+                            type: "button",
+                            action: {
+                                type: "uri",
+                                uri: "https://www.afapsschool.com/af69/index_register69?groupkey=1",
+                                label: " "
                             },
-                            "position": "absolute",
-                            "offsetTop": "56%",
-                            "offsetStart": "64%",
-                            "offsetBottom": "7%",
-                            "offsetEnd": "6%"
+                            position: "absolute",
+                            offsetTop: "61%",
+                            offsetBottom: "32%",
+                            offsetStart: "7%",
+                            offsetEnd: "66%"
                         },
                         {
-                            "type": "button",
-                            "action": {
-                                "type": "uri",
-                                "label": " ",
-                                "uri": "https://liff.line.me/2007236505-SJlLpqIz"
+                            type: "button",
+                            action: {
+                                type: "uri",
+                                uri: "https://www.afapsschool.com/af69/index_register69?groupkey=2",
+                                label: " "
                             },
-                            "position": "absolute",
-                            "offsetTop": "87%",
-                            "offsetStart": "20%",
-                            "offsetBottom": "3%",
-                            "offsetEnd": "20%"
+                            position: "absolute",
+                            offsetTop: "61%",
+                            offsetBottom: "32%",
+                            offsetStart: "36%",
+                            offsetEnd: "36%"
+                        },
+                        {
+                            type: "button",
+                            action: {
+                                type: "uri",
+                                uri: "https://www.afapsschool.com/af69/index_register69?groupkey=2",
+                                label: " "
+                            },
+                            position: "absolute",
+                            offsetTop: "55%",
+                            offsetBottom: "38%",
+                            offsetStart: "36%",
+                            offsetEnd: "36%"
+                        },
+                        {
+                            type: "button",
+                            action: {
+                                type: "uri",
+                                uri: "https://teacherlib.github.io/precadet/bannaafaps69.html",
+                                label: " "
+                            },
+                            position: "absolute",
+                            offsetTop: "56%",
+                            offsetBottom: "35%",
+                            offsetStart: "66%",
+                            offsetEnd: "7%"
+                        },
+                        {
+                            type: "button",
+                            action: {
+                                type: "uri",
+                                uri: "https://teacherlib.github.io/precadet/bannaafaps69.html",
+                                label: " "
+                            },
+                            position: "absolute",
+                            offsetTop: "63%",
+                            offsetBottom: "28%",
+                            offsetStart: "66%",
+                            offsetEnd: "7%"
+                        },
+                        {
+                            type: "button",
+                            action: {
+                                type: "uri",
+                                uri: "https://teacherlib.github.io/precadet/bannaafaps69.html",
+                                label: " "
+                            },
+                            position: "absolute",
+                            offsetTop: "72%",
+                            offsetBottom: "18%",
+                            offsetStart: "66%",
+                            offsetEnd: "7%"
+                        },
+                        {
+                            type: "button",
+                            action: {
+                                type: "uri",
+                                uri: "https://liff.line.me/2007236505-SJlLpqIz",
+                                label: " "
+                            },
+                            position: "absolute",
+                            offsetTop: "87%",
+                            offsetBottom: "3%",
+                            offsetStart: "20%",
+                            offsetEnd: "20%"
+                        },
+                        {
+                            type: "button",
+                            action: {
+                                type: "uri",
+                                uri: "https://www.afapsschool.com/af69/index_register69?groupkey=3",
+                                label: " "
+                            },
+                            position: "absolute",
+                            offsetTop: "70%",
+                            offsetBottom: "24%",
+                            offsetStart: "7%",
+                            offsetEnd: "66%"
+                        },
+                        {
+                            type: "button",
+                            action: {
+                                type: "uri",
+                                uri: "https://www.afapsschool.com/af69/index_register69?groupkey=3",
+                                label: " "
+                            },
+                            position: "absolute",
+                            offsetTop: "76%",
+                            offsetBottom: "18%",
+                            offsetStart: "7%",
+                            offsetEnd: "66%"
+                        },
+                        {
+                            type: "button",
+                            action: {
+                                type: "uri",
+                                uri: "https://www.afapsschool.com/af69/index_register69?groupkey=4",
+                                label: " "
+                            },
+                            position: "absolute",
+                            offsetTop: "70%",
+                            offsetBottom: "24%",
+                            offsetStart: "36%",
+                            offsetEnd: "36%"
+                        },
+                        {
+                            type: "button",
+                            action: {
+                                type: "uri",
+                                uri: "https://www.afapsschool.com/af69/index_register69?groupkey=4",
+                                label: " "
+                            },
+                            position: "absolute",
+                            offsetTop: "76%",
+                            offsetBottom: "18%",
+                            offsetStart: "36%",
+                            offsetEnd: "36%"
                         }
                     ],
-                    "paddingAll": "0%"
+                    paddingAll: "none"
                 }
             }
         };
@@ -204,7 +321,6 @@
                 }
 
                 // 3. Open Share Target Picker
-                // ใส่ flexMessage ไว้ใน Array [flexMessage]
                 const result = await liff.shareTargetPicker([flexMessage]);
                 
                 if (result) {
@@ -220,7 +336,6 @@
                 const errorMsgElement = document.getElementById('errorMsg');
                 errorMsgElement.innerHTML = `❌ เกิดข้อผิดพลาด: <br> ${err.message || 'ไม่ทราบสาเหตุ'}`;
                 displayMessage('errorMsg'); 
-                // ไม่ต้องรีบปิดเพื่อให้ผู้ใช้อ่าน Error
             }
         }
 
