@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ระบบทำสัญญาออนไลน์ นตท.รุ่นที่ 69</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-purple: #9b59b6;
+            --light-purple: #f3e5f5;
+            --accent-purple: #8e44ad;
+            --white: #ffffff;
+            --text-dark: #2c3e50;
+            --shadow-3d: #6d3a82;
+            --highlight-yellow: #fff9c4;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Sarabun', sans-serif; }
+
+        body {
+            background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* เปลี่ยนเพื่อให้เลื่อนหน้าจอลงได้ในมือถือ */
+            padding: 20px 10px;
+        }
+
+        .container {
+            background: var(--white);
+            width: 100%; 
+            max-width: 1100px; 
+            border-radius: 30px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+            overflow: hidden;
+            animation: fadeIn 0.8s ease-out;
+            margin: auto; /* จัดกลางหน้าจอ */
+        }
+
+        .header { 
+            background-color: var(--primary-purple); 
+            padding: 30px 15px; 
+            color: var(--white); 
+            text-align: center;
+            border-bottom: 5px solid var(--accent-purple);
+        }
+
+        .header h1 { 
+            font-size: clamp(1.2rem, 5vw, 2rem); 
+            font-weight: 800; 
+            line-height: 1.4;
+        }
+
+        .date-announcement {
+            background-color: var(--highlight-yellow);
+            margin: 20px auto;
+            padding: 20px;
+            width: 90%;
+            border-radius: 20px;
+            border: 3px dashed var(--accent-purple);
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .date-announcement p {
+            font-size: clamp(1rem, 3vw, 1.3rem);
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+
+        .date-highlight {
+            font-size: clamp(1.5rem, 6vw, 3.5rem); 
+            font-weight: 800;
+            color: #d32f2f; 
+            display: block;
+            line-height: 1.2;
+            text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: row; /* แนวนอนสำหรับจอใหญ่ */
+            padding: 20px 30px 40px 30px;
+            gap: 30px;
+        }
+
+        .col { flex: 1; min-width: 0; } /* ปรับ min-width เพื่อไม่ให้ล้น */
+
+        .section-title {
+            font-weight: 800;
+            color: var(--accent-purple);
+            margin-bottom: 20px;
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--light-purple);
+            display: flex;
+            align-items: center;
+            line-height: 1.4;
+        }
+
+        .btn-grid { display: flex; flex-direction: column; gap: 15px; }
+
+        .btn-3d {
+            padding: 15px 20px;
+            background: var(--primary-purple);
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: bold;
+            text-align: center;
+            transition: all 0.1s;
+            box-shadow: 0 6px 0 var(--shadow-3d);
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1.3;
+        }
+
+        .btn-3d:active { transform: translateY(4px); box-shadow: 0 2px 0 var(--shadow-3d); }
+        .btn-3d:hover { background: var(--accent-purple); filter: brightness(1.1); }
+
+        /* สีประจำเหล่าทัพ (แก้ไขรหัสสีที่เกิน) */
+        .btn-army { background: #FF0000; box-shadow: 0 6px 0 #CC0000; }
+        .btn-navy { background: #1a237e; box-shadow: 0 6px 0 #0d1240; }
+        .btn-air { background: #0288d1; box-shadow: 0 6px 0 #01579b; }
+        .btn-police { background: #b71c1c; box-shadow: 0 6px 0 #7f0000; }
+
+        .footer {
+            padding: 20px;
+            font-size: 12px;
+            color: #777;
+            text-align: center;
+            background: #fdfbff;
+            border-top: 1px solid #eee;
+            line-height: 1.5;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.98); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        /* สำหรับมือถือและ Tablet หน้าจอแนวตั้ง */
+        @media (max-width: 850px) {
+            .main-content { 
+                flex-direction: column; /* เปลี่ยนเป็นแนวตั้ง */
+                padding: 15px; 
+            }
+            .container { border-radius: 20px; }
+            .date-announcement { width: 95%; }
+            .btn-3d { padding: 18px 15px; } /* ขยายปุ่มให้กดง่ายขึ้นในมือถือ */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>ระบบทำสัญญาออนไลน์ เข้าเป็น นตท.รุ่นที่ 69</h1>
+        </div>
+        
+        <div class="date-announcement">
+            <p>ประกาศ: เปิดระบบให้กรอกข้อมูลระหว่างวันที่</p>
+            <span class="date-highlight">1 - 9 พฤษภาคม พ.ศ. 2569</span>
+        </div>
+
+        <div class="main-content">
+            <div class="col">
+                <div class="section-title">📌 เตรียมความพร้อมก่อนทำสัญญาออนไลน์</div>
+                <div class="btn-grid">
+                    <a href="https://drive.google.com/file/d/1hwRp9SOclYfxnxoPG1CAPHjpyzC_V1CH/view" target="_blank" class="btn-3d">📄 ประกาศ รร.ตท.สปท.</a>
+                    <a href="https://canva.link/gotobannaafaps69" target="_blank" class="btn-3d">🎬 วิดีโอแนะนำการทำสัญญา</a>
+                    <a href="https://drive.google.com/file/d/1p5CUI80N0KAiEVEuyZrkyeO3d9GrE6zM/view" target="_blank" class="btn-3d">📂 เอกสารที่ต้องใช้ทำสัญญา</a>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="section-title">🔑 ขอ User และ Password เพื่อเข้าระบบทำสัญญา</div>
+                <div class="btn-grid">
+                    <a href="https://www.afapsschool.com/af69/index_register69?groupkey=1" target="_blank" class="btn-3d btn-army">🎖️ ขอชื่อผู้ใช้และรหัสผ่าน (ทบ.)</a>
+                    <a href="https://www.afapsschool.com/af69/index_register69?groupkey=2" target="_blank" class="btn-3d btn-navy">⚓ ขอชื่อผู้ใช้และรหัสผ่าน (ทร.)</a>
+                    <a href="https://www.afapsschool.com/af69/index_register69?groupkey=3" target="_blank" class="btn-3d btn-air">✈️ ขอชื่อผู้ใช้และรหัสผ่าน (ทอ.)</a>
+                    <a href="https://www.afapsschool.com/af69/index_register69?groupkey=4" target="_blank" class="btn-3d btn-police">🚔 ขอชื่อผู้ใช้และรหัสผ่าน (ตร.)</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            กองสถิติและประเมินผล โรงเรียนเตรียมทหาร สถาบันวิชาการป้องกันประเทศ
+        </div>
+    </div>
+
+</body>
+</html>
